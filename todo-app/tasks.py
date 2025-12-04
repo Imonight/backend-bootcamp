@@ -1,11 +1,15 @@
 from storage import load_todos, save_todos
+from utils import log_action, validate_input
 
+@log_action
+@validate_input
 def add_tasks(tasks):
     todos = load_todos()
     todos.append(tasks)
     save_todos(todos)
     print("Your task have been added")
 
+@log_action
 def view_tasks():
     todos = load_todos()
     if todos == []:
@@ -15,6 +19,7 @@ def view_tasks():
         for i, task in enumerate(todos, 1):
             print(f"{i}. {task}")
 
+@log_action
 def delete_tasks(index):
     view_tasks()
     todos = load_todos()
