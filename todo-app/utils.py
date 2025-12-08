@@ -1,5 +1,6 @@
 from functools import wraps
 
+
 def log_action(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
@@ -7,6 +8,7 @@ def log_action(func):
         result = func(*args, **kwargs)
         print(f"[log] is finished {func.__name__}")
         return result
+
     return wrapper
 
 
@@ -17,8 +19,5 @@ def validate_input(func):
             print("tasks cannot be empty")
             return
         return func(tasks, *args, **kwargs)
-        
+
     return wrapper
-
-
-

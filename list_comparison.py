@@ -1,35 +1,33 @@
-nums = [1,2,3,4,5,6,7,8]
+nums = [1, 2, 3, 4, 5, 6, 7, 8]
 
-#for even number normal loop
+# for even number normal loop
 even = []
 for x in nums:
     if x % 2 == 0:
         even.append(x)
 
-        #OR
+        # OR
 
 evens = [x for x in nums if x % 2 == 0]
 
-#for squared numbers
+# for squared numbers
 squared = []
 for x in nums:
-    squared.append(x*x)
+    squared.append(x * x)
 
-            #OR
+    # OR
 
-squareds = [x*x for x in nums]
+squareds = [x * x for x in nums]
 
-#for x greater than 4
+# for x greater than 4
 greater_than_four = []
 for x in nums:
     if x > 4:
         greater_than_four.append(x)
 
-        #OR
+        # OR
 
 greater_than_fours = [x for x in nums if x > 4]
-
-
 
 
 print(even)

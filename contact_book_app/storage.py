@@ -1,5 +1,7 @@
 import json
+
 FILENAME = "contact.json"
+
 
 def load_contact():
     try:
@@ -8,6 +10,7 @@ def load_contact():
     except FileNotFoundError:
         print("File not Found")
         return {}
+
 
 def save_contact(contact):
     with open(FILENAME, "w") as f:

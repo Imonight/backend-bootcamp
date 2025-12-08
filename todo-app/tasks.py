@@ -1,6 +1,7 @@
 from storage import load_todos, save_todos
 from utils import log_action, validate_input
 
+
 @log_action
 @validate_input
 def add_tasks(tasks):
@@ -8,6 +9,7 @@ def add_tasks(tasks):
     todos.append(tasks)
     save_todos(todos)
     print("Your task have been added")
+
 
 @log_action
 def view_tasks():
@@ -18,6 +20,7 @@ def view_tasks():
         print("Your task(s)")
         for i, task in enumerate(todos, 1):
             print(f"{i}. {task}")
+
 
 @log_action
 def delete_tasks(index):

@@ -3,7 +3,7 @@ import json
 FILENAME = "contacts.json"
 
 
-#load contacts
+# load contacts
 def load_contact():
     try:
         with open(FILENAME, "r") as f:
@@ -11,27 +11,30 @@ def load_contact():
     except FileNotFoundError:
         print("File not found")
         return {}
-    
 
-#save contacts
+
+# save contacts
 def save_contact(contacts):
     with open(FILENAME, "w") as f:
         json.dump(contacts, f)
-    
-#add contacts
+
+
+# add contacts
 def add_contacts(name, phone):
     contacts = load_contact()
     contacts[name] = phone
     save_contact(contacts)
-    print(f"your name {name} and your phone number {phone} have been added to the contact")
+    print(f"{name} and phone {phone} have been added ")
 
-#view contacts
+
+# view contacts
 def view_contacts():
     contacts = load_contact()
     for name, phone in contacts.items():
         print(f"{name} : {phone}")
 
-#cli menu
+
+# cli menu
 def menu():
     while True:
         print("\nContact Menu")
@@ -50,6 +53,6 @@ def menu():
         else:
             print("you have entered an invalid choice")
 
+
 if __name__ == "__main__":
     menu()
-

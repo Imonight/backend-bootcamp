@@ -2,6 +2,7 @@ from bank import Bank
 
 bank = Bank()
 
+
 def menu():
     while True:
         print("Welcome to EazyBrave Bank")
@@ -37,7 +38,6 @@ def menu():
         else:
             print("invalid input")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     menu()
-
-
