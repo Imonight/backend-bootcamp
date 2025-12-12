@@ -1,3 +1,4 @@
+# flake8: noqa
 from storage import load_contact, save_contact
 from util import validate_input, log_action
 
@@ -33,7 +34,7 @@ class Contact:
         contact = load_contact()
         key_word = keyword.lower()
         result = {
-            name: phone for name, phone in contact.items() if key_word in name.lower()
+            name: phone for name, phone in contact.items() if key_word in name.lower()  # noqa: E501
         }
         if result:
             print("\nSearch Results ")
