@@ -34,7 +34,9 @@ class Contact:
         contact = load_contact()
         key_word = keyword.lower()
         result = {
-            name: phone for name, phone in contact.items() if key_word in name.lower()  # noqa: E501
+            name: phone
+            for name, phone in contact.items()
+            if key_word in name.lower()  # noqa: E501
         }
         if result:
             print("\nSearch Results ")
